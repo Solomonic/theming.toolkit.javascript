@@ -1,11 +1,14 @@
+# -*- coding: utf-8 -*-
+
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = '0.1dev'
 
-setup(name='theming.toolkit.javascript',
+setup(
+      name='theming.toolkit.javascript',
       version=version,
-      description="Usefull javascripts for the theming.toolkit",
+      description="Useful javascripts for the theming.toolkit",
       long_description=open('README.rst').read() + '\n' +
                      open(os.path.join('docs', 'HISTORY.txt')).read(),
       classifiers=[
@@ -14,9 +17,9 @@ setup(name='theming.toolkit.javascript',
       keywords='javascript',
       author='Jens Krause',
       author_email='jens@propertyshelf.com',
-      url='http://propertyshelf.com',
+      url='https://github.com/Solomonic/theming.toolkit.javascript',
       license='gpl',
-      packages=find_packages('src'),
+      packages=find_packages('src', exclude=['ez_setup']),
       package_dir = {'': 'src'},
       namespace_packages=['theming', 'theming.toolkit'],
       include_package_data=True,
@@ -29,6 +32,8 @@ setup(name='theming.toolkit.javascript',
              'test': ['plone.app.testing',]
       },
       entry_points="""
-      # -*- Entry points: -*-
-      """,
+        # -*- Entry points: -*- 
+        [z3c.autoinclude.plugin]
+        target = plone
+        """,
       )
