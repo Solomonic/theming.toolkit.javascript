@@ -2,7 +2,7 @@ function ClassicTheme(slider){
     /* make a decent content slider with nices effects*/
     console.log('<-- ClassicTheme -->');
     console.log(slider);
-    if(Galleria){    
+    if(Galleria){
       Galleria.loadTheme('themes/classic/galleria.classic.js');
       $(".toolkit-slider-classic").css("height", "300px");
 
@@ -31,15 +31,13 @@ function ClassicTheme(slider){
 }
 
 $(document).ready(function() {
-  if($(".toolkit-slider").length>0){
-    //$(".toolkit-slider").hide();
-  }
+  
 });
 
 $(window).load(function() {
   if($(".toolkit-slider-classic").length>0){
     try{
-        ClassicTheme($(".toolkit-slider-classic"));    
+        ClassicTheme($(".toolkit-slider-classic"));
     }
     catch(e){
         //error in classic theme

@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="theming.toolkit.javascript">
+
+  <!-- Include package dependencies. -->
+  <!-- ============================= 
+  <includeDependencies package="." />
+  -->
+
+  <genericsetup:registerProfile
+      name="default"
+      title="theming.toolkit.javascript"
+      directory="profiles/default"
+      description="Installs a set of useful javascripts for richer Plone Content"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+  <!-- -*- extra stuff goes here -*- -->
+  
+</configure>
