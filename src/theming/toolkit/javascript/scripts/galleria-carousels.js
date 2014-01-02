@@ -6,7 +6,7 @@ function ClassicTheme(slider){
       Galleria.loadTheme('themes/classic/galleria.classic.js');
       $(".toolkit-slider-classic").css("height", "300px");
 
-      Galleria.run('.toolkit-slider', {
+      Galleria.run('.toolkit-slider-classic', {
         dataConfig: function(img) {
           return {
             title: $(img).attr('alt'),

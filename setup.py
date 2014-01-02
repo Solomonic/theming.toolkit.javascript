@@ -14,7 +14,7 @@ setup(name='theming.toolkit.javascript',
       keywords='javascript',
       author='Jens Krause',
       author_email='jens@propertyshelf.com',
-      url='http://svn.plone.org/svn/collective/',
+      url='http://propertyshelf.com',
       license='gpl',
       packages=find_packages('src'),
       package_dir = {'': 'src'},
@@ -25,6 +25,9 @@ setup(name='theming.toolkit.javascript',
           'setuptools',
           # -*- Extra requirements: -*-
       ],
+      extras_require={
+             'test': ['plone.app.testing',]
+      },
       entry_points="""
       # -*- Entry points: -*-
       """,
