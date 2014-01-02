@@ -1,16 +1,10 @@
-
-$(document).ready(function() {
-  if($(".toolkit-slider").length>0){
-    //$(".toolkit-slider").hide();
-  }
-});
-
-$(window).load(function() {
-  if($(".toolkit-slider").length>0){
-    if(Galleria){
-     
+function ClassicTheme(slider){
+    /* make a decent content slider with nices effects*/
+    console.log('<-- ClassicTheme -->');
+    console.log(slider);
+    if(Galleria){    
       Galleria.loadTheme('themes/classic/galleria.classic.js');
-      $(".toolkit-slider").css("height", "300px");
+      $(".toolkit-slider-classic").css("height", "300px");
 
       Galleria.run('.toolkit-slider', {
         dataConfig: function(img) {
@@ -33,8 +27,25 @@ $(window).load(function() {
       });
 
     }
-    else{
-      
-    }
+    
+}
+
+$(document).ready(function() {
+  if($(".toolkit-slider").length>0){
+    //$(".toolkit-slider").hide();
   }
+});
+
+$(window).load(function() {
+  if($(".toolkit-slider-classic").length>0){
+    try{
+        ClassicTheme($(".toolkit-slider-classic"));    
+    }
+    catch(e){
+        //error in classic theme
+        console.log(e);
+    }
+    
+  }
+
 });
